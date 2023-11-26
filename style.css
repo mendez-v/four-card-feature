@@ -1,0 +1,228 @@
+@font-face {
+  font-family: "Poppins";
+  src: url(./assets/font/poppins-extralight.woff2) format("woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url(./assets/font/poppins-regular.woff2) format("woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url(./assets/font/poppins-semibold.woff2) format("woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 600;
+}
+
+html {
+  box-sizing: border-box;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-block-size: 100vh;
+  min-block-size: 100svh;
+  margin: 0;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  place-items: center;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--very-light-gray);
+}
+
+:root {
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+  --purple: hsl(255, 44%, 46%);
+  --very-dark-blue: hsl(232, 12%, 34%);
+  --very-light-gray: hsl(0, 0%, 98%);
+  --shadow: hsl(213, 47%, 67%);
+}
+
+.article {
+  --radius: .5em;
+  margin: 5.3em auto;
+  inline-size: 83.8vw;
+  inline-size: 82.8vw;
+  max-inline-size: 22rem;
+  text-align: center;
+  color: var(--very-dark-blue);
+}
+.article__title {
+  margin-bottom: 0;
+  inline-size: 21ch;
+  font-size: clamp(1.5rem, 1.2rem + 1.28vw, 2.25rem);
+  font-weight: 200;
+  letter-spacing: .25px;
+  line-height: 1.55;
+}
+.article__title--accent {
+  font-weight: 600;
+}
+.article__desc {
+  inline-size: 100%;
+  max-inline-size: 55ch;
+  font-size: .9375rem;
+  font-weight: 400;
+  letter-spacing: .14px;
+  line-height: 1.66;
+}
+.article__title,
+.article__desc {
+  margin-inline: auto;
+}
+
+.card-container {
+  margin-top: 4.6em;
+  display: grid;
+  gap: 1.6em;
+}
+
+.card {
+  padding: .7em 1.75em 1.71em;
+  text-align: left;
+  background-color: var(--very-light-gray);
+  box-shadow: 0 .5em 1em -.5em hsl(from var(--shadow) h s l / .5 );
+  border-radius: var(--radius);
+}
+
+.card__title {
+  margin-bottom: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.card__desc {
+  margin-top: .6em;
+  font-size: .8125rem;
+  font-weight: 400;
+  letter-spacing: .2px;
+  line-height: 1.77;
+}
+.card__icon {
+  margin-left: auto;
+  margin-top: 1.95em;
+  display: block;
+  inline-size: clamp(3.5625rem, 15.2vw, 4rem);
+  block-size: auto;
+}
+
+.attribution {
+  margin-top: -2.84em;
+  padding-bottom: 1.5em;
+  display: block;
+  font-size: .75rem;
+  text-align: center;
+  color: var(--very-dark-blue);
+}
+.attribution__link {
+  margin-inline: .3em;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--purple);
+  position: relative;
+}
+
+.attribution__link::after {
+  content: '';
+  position: absolute;
+  bottom: -.2em;
+  right: 0;
+  inline-size: 100%;
+  block-size: .13rem;
+  background-color: currentColor;
+  transition: inline-size .25s ease-in-out;
+}
+
+
+.attribution__link:focus-visible {
+  outline: .2em dotted var(--purple);
+  outline-offset: 2px;
+}
+.attribution__link:focus-visible:after {
+  inline-size: 0;
+  left: 0;
+}
+
+.card:first-child {
+  border-top: .25em solid var(--cyan);
+}
+.card:nth-child(2) {
+  border-top: .25em solid var(--red);
+}
+.card:nth-child(3) {
+  border-top: .25em solid var(--orange);
+}
+.card:last-child {
+  border-top: .25em solid var(--blue);
+}
+
+@media (width >= 45rem) {
+  .article {
+    max-inline-size: 43rem;
+  }
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (width >= 64rem) {
+  .article {
+    max-inline-size: 62.5rem;
+  }
+  .article__desc {
+    margin-top: 1.15em;
+  }
+  .card-container {
+    margin-top: 3.85em;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .card:first-child,
+  .card:last-child {
+    transform: translateY(56%);
+  }
+  .card:nth-child(3) {
+    grid-column: 2/3;
+  }
+  .card:last-child {
+    grid-column: 3/-1;
+    grid-row: 1/2;
+  }
+}
+
+@media (width >= 85.375rem) {
+  .article {
+    max-inline-size: 69.375rem;
+    margin-block: 5.17em;
+  }
+  .article__title {
+    line-height: 1.4;
+  }
+  .card-container {
+    gap: 1.85em;
+  }
+  .card {
+    padding: 1em 2.15em 2em 2em;
+  }
+  .card__desc {
+    margin-top: 1em;
+  }
+  .card__icon {
+    margin-top: 2.4em;
+  }
+}
+
+@media (hover:hover) {
+  .attribution__link:hover::after {
+    inline-size: 0;
+    left: 0;
+  }
+}
