@@ -44,6 +44,7 @@ body {
   --orange: hsl(34, 97%, 64%);
   --blue: hsl(212, 86%, 64%);
   --purple: hsl(255, 44%, 46%);
+  --white: hsl(0, 0%, 100%);
   --very-dark-blue: hsl(232, 12%, 34%);
   --very-light-gray: hsl(0, 0%, 98%);
   --shadow: hsl(213, 47%, 67%);
@@ -91,7 +92,7 @@ body {
 .card {
   padding: .7em 1.75em 1.71em;
   text-align: left;
-  background-color: var(--very-light-gray);
+  background-color: var(--white);
   box-shadow: 0 15px 30px -10px hsl(from var(--shadow) h s l / .5 );
   border-radius: var(--radius);
 }
