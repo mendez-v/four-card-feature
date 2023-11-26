@@ -40,7 +40,7 @@ Users should be able to:
 
 [Demo: ](https://mendez-v.github.io/four-card-feature/) 👀
 
-<!-- [Frontend Mentor](https://your-live-site-url.com) 👀 -->
+[Frontend Mentor](https://www.frontendmentor.io/solutions/four-card-feature-using-css-grid-and-pseudoclasses-jK_lEEdpiL) 👀
 
 ## My process
 
@@ -51,6 +51,8 @@ Users should be able to:
 ✅ CSS custom properties
 
 ✅ CSS Grid
+
+✅ Pseudo-classes
 
 ✅ Mobile-first workflow
 

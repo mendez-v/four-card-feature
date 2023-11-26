@@ -92,7 +92,7 @@ body {
   padding: .7em 1.75em 1.71em;
   text-align: left;
   background-color: var(--very-light-gray);
-  box-shadow: 0 .5em 1em -.5em hsl(from var(--shadow) h s l / .5 );
+  box-shadow: 0 15px 30px -10px hsl(from var(--shadow) h s l / .5 );
   border-radius: var(--radius);
 }
 
