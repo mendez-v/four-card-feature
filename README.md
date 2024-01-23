@@ -38,9 +38,11 @@ Users should be able to:
 
 ### Links
 
-[Demo: ](https://mendez-v.github.io/four-card-feature/) 👀
+[Live Site](https://mendez-v.github.io/four-card-feature/) 👀
 
-[Frontend Mentor](https://www.frontendmentor.io/solutions/four-card-feature-using-css-grid-and-pseudoclasses-jK_lEEdpiL) 👀
+[Solution in Frontend Mentor](https://www.frontendmentor.io/solutions/four-card-feature-using-css-grid-and-pseudoclasses-jK_lEEdpiL) 👀
+
+[Challenge Repository](https://github.com/mendez-v/frontend-mentor-challenges) 👀
 
 ## My process
 
